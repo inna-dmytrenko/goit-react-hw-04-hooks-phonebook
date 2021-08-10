@@ -8,9 +8,12 @@ import filterContacts from "./components/helpers/FilterContacts";
 import { Aside, Block } from "./components/PhoneBook/PhoneBook.styled";
 
 export default function App() {
-  const [contacts, setContacts] = useState(
-    JSON.parse(localStorage.getItem("contacts"))
-  );
+  const [contacts, setContacts] = useState([
+    { name: "Rosie Simpson", number: "459-12-56", id: "id-1" },
+    { name: "Hermione Kline", number: "443-89-12", id: "id-2" },
+    { name: "Eden Clements", number: "645-17-79", id: "id-3" },
+    { name: "Annie Copeland", number: "227-91-26", id: "id-4" },
+  ]);
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [filter, setFilter] = useState("");
